@@ -21,7 +21,7 @@ Packaging
 
 :ref:`https://packaging.python.org/en/latest/glossary/`
 
-.. include:: ./foot.rst
+.. include:: ./trim.rst
 
 .. note::
 
@@ -36,7 +36,7 @@ Packager
 
 - Transform your package into a project
 - Build a distribution from your project
-- Upload this distribution
+- Publish this distribution
 - Download this project
 
 .. .. rst-class:: ribbon
@@ -48,7 +48,7 @@ Packager
    * you are the packager and I assume these are your goals leaving here today. Although you may have already started some
    * because you want others to download and use your distribution
 
-.. include:: ./foot.rst
+.. include:: ./trim.rst
 
 The Package
 ===========
@@ -64,7 +64,7 @@ The Package
       ├── talks.py
       └── tutorials.py
 
-.. include:: ./foot.rst
+.. include:: ./trim.rst
 
 .. note::
 
@@ -88,14 +88,14 @@ The Project
           ├── talks.py
           └── tutorials.py
 
-.. include:: ./foot.rst
+.. include:: ./trim.rst
 
 .. note::
 
    * it doesn't actually matter where the package lives within the project. For this example it will stay at the root
 
-The pyproject.toml File
-=======================
+pyproject.toml
+==============
 
 - Single location to describe all project metadata
    - including how to build a distribution from this project
@@ -104,21 +104,26 @@ The pyproject.toml File
 
 :ref:`https://toml.io`
 
-.. include:: ./foot.rst
+.. include:: ./trim.rst
 
-.. nextslide::
-
-build-system Metadata:
+Build System Metadata
+=====================
 
 - Specify all packages required to bootstrap the build of your project
    - there will be at least one: the project's build backend
-- Specify the exact command to kick off a build of your project
+- Specify the location of entrypoints within a build backend
+   - all backends support a common interface
 
-.. include:: ./foot.rst
+.. include:: ./trim.rst
 
-.. nextslide::
+.. note::
+
+   * choice of backend is up to the project author
+   * a project can only ever have one backend (at a time)
+   * series of public functions and their arguments defined by PEPs
 
 Build Backends:
+===============
 
 - setuptools
 - flit
@@ -126,9 +131,10 @@ Build Backends:
 - enscons
 - poetry
 
-.. include:: ./foot.rst
+.. include:: ./trim.rst
 
-.. nextslide::
+pyproject.toml
+==============
 
 ::
 
@@ -136,7 +142,7 @@ Build Backends:
    requires = []
    build-backend = ""
 
-.. include:: ./foot.rst
+.. include:: ./trim.rst
 
 .. note::
 
@@ -151,20 +157,20 @@ Build Backends:
    requires = ["setuptools>=61"]
    build-backend = "setuptools.build_meta"
 
-.. include:: ./foot.rst
-
-.. nextslide::
+.. include:: ./trim.rst
 
 Project Metadata:
+=================
 
 - Specify details about your project
    - pypi.org fields
    - solving information
    - documentation
 
-.. include:: ./foot.rst
+.. include:: ./trim.rst
 
-.. nextslide::
+pyproject.toml
+==============
 
 ::
 
@@ -186,7 +192,7 @@ Project Metadata:
 
 :ref:`https://packaging.python.org/en/latest/specifications/declaring-project-metadata/`
 
-.. include:: ./foot.rst
+.. include:: ./trim.rst
 
 .. note::
 
@@ -208,7 +214,7 @@ The Project
           ├── talks.py
           └── tutorials.py
 
-.. include:: ./foot.rst
+.. include:: ./trim.rst
 
 .. note::
 
@@ -226,7 +232,7 @@ Distribution
 - Packaging can involve creating more than one distribution
    - one sdist and one or more wheels per version release
 
-.. include:: ./foot.rst
+.. include:: ./trim.rst
 
 .. note::
 
@@ -240,7 +246,7 @@ Build Frontends
 - Handles user interaction
 - Not specified in the project metadata
 
-.. include:: ./foot.rst
+.. include:: ./trim.rst
 
 .. note::
 
@@ -250,15 +256,13 @@ Build Frontends
 
 .. nextslide::
 
-Build Frontends:
-
 - build
 - flit
 - maturin
 - enscons
 - poetry
 
-.. include:: ./foot.rst
+.. include:: ./trim.rst
 
 .. note::
 
@@ -278,19 +282,19 @@ Build Frontends:
        ├── europython-2022.1-py2-py3-none-any.whl
        └── europython-2022.1.tar.gz
 
-.. include:: ./foot.rst
+.. include:: ./trim.rst
 
 .. note::
 
    * this is the command that actually calls the ``build`` package
 
-Distribution
-============
+Publish
+=======
 
 - Share distribution files with end-users
 - Upload to pypi.org
 
-.. include:: ./foot.rst
+.. include:: ./trim.rst
 
 .. nextslide::
 
@@ -299,7 +303,7 @@ Distribution
 - maturin
 - poetry
 
-.. include:: ./foot.rst
+.. include:: ./trim.rst
 
 .. nextslide::
 
@@ -308,7 +312,7 @@ Distribution
    twine upload --repository-url=https://test.pypi.org/legacy/ dist/*
    twine upload dist/*
 
-.. include:: ./foot.rst
+.. include:: ./trim.rst
 
 .. note::
 
@@ -323,7 +327,7 @@ Package Managers
 - Solve for dependencies
 - May have to dispatch to build backends during installation
 
-.. include:: ./foot.rst
+.. include:: ./trim.rst
 
 .. note::
 
@@ -339,7 +343,15 @@ Package Managers
 - pdm
 - poetry
 
-.. include:: ./foot.rst
+.. include:: ./trim.rst
+
+.. nextslide::
+
+::
+
+   pip install 'europython>=2022'
+
+.. include:: ./trim.rst
 
 Packaging
 =========
@@ -348,33 +360,33 @@ Packaging
 
 - Transform your package into a project
    - include a ``pyproject.toml``
-   - select a build backend [setuptools]
+   - select a build backend [``setuptools``]
    - record project metadata
 - Build distributions from your project
    - snapshot your project at a version
-   - create sdist and wheel [build]
+   - create sdist and wheel [``build``]
 
-.. include:: ./foot.rst
+.. include:: ./trim.rst
 
 .. nextslide::
 
 .. rst-class:: build
 
-- Upload these distributions
-   - upload to a repository like pypi.org [twine]
+- Publish these distributions
+   - upload to a repository like pypi.org [``twine``]
 - Install a package
-   - download and unpack a distribution [pip]
+   - download and unpack a distribution [``pip``]
    - solves based on version ranges and current platform
    - also fulfills all runtime requirements of the distribution
 
-.. include:: ./foot.rst
+.. include:: ./trim.rst
 
 .. note::
 
    * bonus package lifecycle steps not part of "packaging"
    * notice we upload a distribution but download a package
 
-.. include:: ./foot.rst
+.. include:: ./trim.rst
 
 ==========================
  Questions?
