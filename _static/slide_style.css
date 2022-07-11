@@ -28,13 +28,100 @@
 
 /* offset for all slides*/
 article h1 {
-    padding-top: 80px;
-    padding-left: 300px;
+  padding-top: 80px;
+  padding-left: 160px;
+  font-size: 4em;
+  font-weight: 900;
+  letter-spacing: 0px;
 }
 article h2 {
-    padding-left: 40px;
-    padding-top: 40px;
+  padding-left: 60px;
+  padding-top: 40px;
+  padding-bottom: 60px;
+  font-size: 2.75em;
+  font-weight: 600;
+  letter-spacing: 0px;
 }
+p {
+  padding-left: 80px;
+  padding-top: 40px;
+  margin-top: 0px;
+  font-weight: 500;
+  font-size: 70px;
+}
+ul {
+  padding-left: 80px;
+  margin-right: 150px;
+  font-size: 55px;
+  line-height: 57px;
+}
+ul li::before {
+  content: '●';
+}
+ul ul {
+  padding-left: 0px;
+  margin-left: 20px;
+}
+dd {
+  margin-top: 0.5em;
+}
+.resource {
+  font-weight: 300;
+  font-size: 35px;
+  position: absolute;
+  bottom: .2em;
+}
+/* code boxes */
+div.highlight-default.notranslate {
+  margin-left: 80px;
+  margin-right: 200px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-size: 45px;
+}
+/* code text */
+/*pre {
+*  color: gray;
+*}
+*/
+
+/* signature footer */
+.figure.align-default {
+  width: 4em;
+  height: 1.75em;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+.align-default {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  text-aline: right;
+}
+p.caption {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.second {
+  position: absolute;
+  right: 64px;
+  bottom: 0;
+}
+.nfirst {
+  position: absolute;
+  left: -90%;
+  bottom: 5%;
+}
+/*
+ .ribbon {
+  position: absolute;
+  top: 70%;
+  width: 200%;
+  height: 200%;
+  z-index: -1;
+}
+*/
 
 /* set color theme here */
 :root {
