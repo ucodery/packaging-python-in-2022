@@ -29,18 +29,25 @@
 /* offset for all slides*/
 article h1 {
   padding-top: 80px;
-  padding-left: 160px;
-  font-size: 4em;
+  padding-left: 80px;
+  font-size: 4.4em;
   font-weight: 900;
   letter-spacing: 0px;
 }
 article h2 {
-  padding-left: 60px;
   padding-top: 40px;
-  padding-bottom: 60px;
+  padding-bottom: 40px;
+  margin-left: 60px;
+  margin-right: 200px;
+  margin-bottom: 20px;
   font-size: 2.75em;
   font-weight: 600;
   letter-spacing: 0px;
+  box-shadow:
+    0 5px 0 #e88011,
+    0 8px 0 #fbc997;
+    /*0 10px 0 #44a624;
+    /*0 20px 0 #1b643a;*/
 }
 p {
   padding-left: 80px;
@@ -65,11 +72,13 @@ ul ul {
 dd {
   margin-top: 0.5em;
 }
-.resource {
+.std-ref {
   font-weight: 300;
-  font-size: 35px;
+  font-size: 42px;
+  text-decoration: underline;
   position: absolute;
-  bottom: .2em;
+  bottom: 2em;
+  left: 80;
 }
 /* code boxes */
 div.highlight-default.notranslate {
@@ -94,34 +103,41 @@ div.highlight-default.notranslate {
 }
 .align-default {
   position: absolute;
-  right: 0;
+  left: 0.5%;
   bottom: 0;
-  text-aline: right;
+}
+.figure.align-default {
+  text-align: left;
+  margin-bottom: 0;
 }
 p.caption {
   position: absolute;
-  right: 0;
+  left: 0;
   bottom: 0;
 }
-.second {
+.lthird {
   position: absolute;
-  right: 64px;
+  left: 15px;
+  bottom: 34px;
+  font-size: 24px;
+}
+.lsecond {
+  position: absolute;
+  left: 50px;
   bottom: 0;
 }
-.nfirst {
+.right {
   position: absolute;
-  left: -90%;
-  bottom: 5%;
+  right: 2%;
+  bottom: 2%;
 }
-/*
- .ribbon {
+.rsmall {
   position: absolute;
-  top: 70%;
-  width: 200%;
-  height: 200%;
-  z-index: -1;
+  right: 2%;
+  bottom: 2%;
+  width: 156px;
+  height: 156px;
 }
-*/
 
 /* set color theme here */
 :root {

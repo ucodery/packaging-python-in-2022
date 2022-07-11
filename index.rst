@@ -2,9 +2,10 @@
  Packaging Python in 2022
 ==========================
 
-.. figure:: _static/python-platypus.png
+.. rst-class:: right
+
+.. image:: _static/python-platypus.png
    :alt: cartoon platypus
-   :align: right
 
 Packaging
 =========
@@ -18,23 +19,9 @@ Packaging
    - often downloaded from the internet
    - does not necessarily commute with packaging
 
-.. rst-class:: resource
+:ref:`https://packaging.python.org/en/latest/glossary/`
 
-https://packaging.python.org/en/latest/glossary/
-
-.. rst-class:: second
-
-.. figure:: _static/Twitter-Mark.png
-   :width: 32px
-   :alt: twitter
-
-   @ucodery
-
-.. figure:: _static/GitHub-Mark-32px.png
-   :width: 32px
-   :alt: octocat
-
-   @ucodery
+.. include:: ./foot.rst
 
 .. note::
 
@@ -56,29 +43,12 @@ Packager
 
 .. .. image:: _static/swirl.svg
 
-.. rst-class:: nfirst
-
-.. figure:: _static/EP22logosmall.svg
-   :width: 96px
-
-.. rst-class:: second
-
-.. figure:: _static/Twitter-Mark.png
-   :width: 32px
-   :alt: twitter
-
-   @ucodery
-
-.. figure:: _static/GitHub-Mark-32px.png
-   :width: 32px
-   :alt: octocat
-
-   @ucodery
-
 .. note::
 
    * you are the packager and I assume these are your goals leaving here today. Although you may have already started some
    * because you want others to download and use your distribution
+
+.. include:: ./foot.rst
 
 The Package
 ===========
@@ -94,19 +64,7 @@ The Package
       ├── talks.py
       └── tutorials.py
 
-.. rst-class:: second
-
-.. figure:: _static/Twitter-Mark.png
-   :width: 32px
-   :alt: twitter
-
-   @ucodery
-
-.. figure:: _static/GitHub-Mark-32px.png
-   :width: 32px
-   :alt: octocat
-
-   @ucodery
+.. include:: ./foot.rst
 
 .. note::
 
@@ -130,19 +88,7 @@ The Project
           ├── talks.py
           └── tutorials.py
 
-.. rst-class:: second
-
-.. figure:: _static/Twitter-Mark.png
-   :width: 32px
-   :alt: twitter
-
-   @ucodery
-
-.. figure:: _static/GitHub-Mark-32px.png
-   :width: 32px
-   :alt: octocat
-
-   @ucodery
+.. include:: ./foot.rst
 
 .. note::
 
@@ -156,23 +102,9 @@ The pyproject.toml File
 - Not in itself a build tool
 - Human and machine readable configuration
 
-.. rst-class:: resource
+:ref:`https://toml.io`
 
-https://toml.io
-
-.. rst-class:: second
-
-.. figure:: _static/Twitter-Mark.png
-   :width: 32px
-   :alt: twitter
-
-   @ucodery
-
-.. figure:: _static/GitHub-Mark-32px.png
-   :width: 32px
-   :alt: octocat
-
-   @ucodery
+.. include:: ./foot.rst
 
 .. nextslide::
 
@@ -182,19 +114,7 @@ build-system Metadata:
    - there will be at least one: the project's build backend
 - Specify the exact command to kick off a build of your project
 
-.. rst-class:: second
-
-.. figure:: _static/Twitter-Mark.png
-   :width: 32px
-   :alt: twitter
-
-   @ucodery
-
-.. figure:: _static/GitHub-Mark-32px.png
-   :width: 32px
-   :alt: octocat
-
-   @ucodery
+.. include:: ./foot.rst
 
 .. nextslide::
 
@@ -206,18 +126,7 @@ Build Backends:
 - enscons
 - poetry
 
-.. rst-class:: second
-
-.. figure:: _static/Twitter-Mark.png
-   :width: 32px
-   :alt: twitter
-
-   @ucodery
-
-.. figure:: _static/GitHub-Mark-32px.png
-   :alt: octocat
-
-   @ucodery
+.. include:: ./foot.rst
 
 .. nextslide::
 
@@ -227,18 +136,7 @@ Build Backends:
    requires = []
    build-backend = ""
 
-.. rst-class:: second
-
-.. figure:: _static/Twitter-Mark.png
-   :width: 32px
-   :alt: twitter
-
-   @ucodery
-
-.. figure:: _static/GitHub-Mark-32px.png
-   :alt: octocat
-
-   @ucodery
+.. include:: ./foot.rst
 
 .. note::
 
@@ -253,18 +151,7 @@ Build Backends:
    requires = ["setuptools>=61"]
    build-backend = "setuptools.build_meta"
 
-.. rst-class:: second
-
-.. figure:: _static/Twitter-Mark.png
-   :width: 32px
-   :alt: twitter
-
-   @ucodery
-
-.. figure:: _static/GitHub-Mark-32px.png
-   :alt: octocat
-
-   @ucodery
+.. include:: ./foot.rst
 
 .. nextslide::
 
@@ -275,18 +162,7 @@ Project Metadata:
    - solving information
    - documentation
 
-.. rst-class:: second
-
-.. figure:: _static/Twitter-Mark.png
-   :width: 32px
-   :alt: twitter
-
-   @ucodery
-
-.. figure:: _static/GitHub-Mark-32px.png
-   :alt: octocat
-
-   @ucodery
+.. include:: ./foot.rst
 
 .. nextslide::
 
@@ -308,22 +184,9 @@ Project Metadata:
    FAQ = "https://ep2022.europython.eu/faq"
    source = "https://github.com/EuroPython/website"
 
-.. rst-class:: resource
+:ref:`https://packaging.python.org/en/latest/specifications/declaring-project-metadata/`
 
-https://packaging.python.org/en/latest/specifications/declaring-project-metadata/
-
-.. rst-class:: second
-
-.. figure:: _static/Twitter-Mark.png
-   :width: 32px
-   :alt: twitter
-
-   @ucodery
-
-.. figure:: _static/GitHub-Mark-32px.png
-   :alt: octocat
-
-   @ucodery
+.. include:: ./foot.rst
 
 .. note::
 
@@ -345,19 +208,7 @@ The Project
           ├── talks.py
           └── tutorials.py
 
-.. rst-class:: second
-
-.. figure:: _static/Twitter-Mark.png
-   :width: 32px
-   :alt: twitter
-
-   @ucodery
-
-.. figure:: _static/GitHub-Mark-32px.png
-   :width: 32px
-   :alt: octocat
-
-   @ucodery
+.. include:: ./foot.rst
 
 .. note::
 
@@ -375,19 +226,7 @@ Distribution
 - Packaging can involve creating more than one distribution
    - one sdist and one or more wheels per version release
 
-.. rst-class:: second
-
-.. figure:: _static/Twitter-Mark.png
-   :width: 32px
-   :alt: twitter
-
-   @ucodery
-
-.. figure:: _static/GitHub-Mark-32px.png
-   :width: 32px
-   :alt: octocat
-
-   @ucodery
+.. include:: ./foot.rst
 
 .. note::
 
@@ -401,19 +240,7 @@ Build Frontends
 - Handles user interaction
 - Not specified in the project metadata
 
-.. rst-class:: second
-
-.. figure:: _static/Twitter-Mark.png
-   :width: 32px
-   :alt: twitter
-
-   @ucodery
-
-.. figure:: _static/GitHub-Mark-32px.png
-   :width: 32px
-   :alt: octocat
-
-   @ucodery
+.. include:: ./foot.rst
 
 .. note::
 
@@ -431,19 +258,7 @@ Build Frontends:
 - enscons
 - poetry
 
-.. rst-class:: second
-
-.. figure:: _static/Twitter-Mark.png
-   :width: 32px
-   :alt: twitter
-
-   @ucodery
-
-.. figure:: _static/GitHub-Mark-32px.png
-   :width: 32px
-   :alt: octocat
-
-   @ucodery
+.. include:: ./foot.rst
 
 .. note::
 
@@ -463,19 +278,7 @@ Build Frontends:
        ├── europython-2022.1-py2-py3-none-any.whl
        └── europython-2022.1.tar.gz
 
-.. rst-class:: second
-
-.. figure:: _static/Twitter-Mark.png
-   :width: 32px
-   :alt: twitter
-
-   @ucodery
-
-.. figure:: _static/GitHub-Mark-32px.png
-   :width: 32px
-   :alt: octocat
-
-   @ucodery
+.. include:: ./foot.rst
 
 .. note::
 
@@ -487,19 +290,7 @@ Distribution
 - Share distribution files with end-users
 - Upload to pypi.org
 
-.. rst-class:: second
-
-.. figure:: _static/Twitter-Mark.png
-   :width: 32px
-   :alt: twitter
-
-   @ucodery
-
-.. figure:: _static/GitHub-Mark-32px.png
-   :width: 32px
-   :alt: octocat
-
-   @ucodery
+.. include:: ./foot.rst
 
 .. nextslide::
 
@@ -508,19 +299,7 @@ Distribution
 - maturin
 - poetry
 
-.. rst-class:: second
-
-.. figure:: _static/Twitter-Mark.png
-   :width: 32px
-   :alt: twitter
-
-   @ucodery
-
-.. figure:: _static/GitHub-Mark-32px.png
-   :width: 32px
-   :alt: octocat
-
-   @ucodery
+.. include:: ./foot.rst
 
 .. nextslide::
 
@@ -529,19 +308,7 @@ Distribution
    twine upload --repository-url=https://test.pypi.org/legacy/ dist/*
    twine upload dist/*
 
-.. rst-class:: second
-
-.. figure:: _static/Twitter-Mark.png
-   :width: 32px
-   :alt: twitter
-
-   @ucodery
-
-.. figure:: _static/GitHub-Mark-32px.png
-   :width: 32px
-   :alt: octocat
-
-   @ucodery
+.. include:: ./foot.rst
 
 .. note::
 
@@ -556,19 +323,7 @@ Package Managers
 - Solve for dependencies
 - May have to dispatch to build backends during installation
 
-.. rst-class:: second
-
-.. figure:: _static/Twitter-Mark.png
-   :width: 32px
-   :alt: twitter
-
-   @ucodery
-
-.. figure:: _static/GitHub-Mark-32px.png
-   :width: 32px
-   :alt: octocat
-
-   @ucodery
+.. include:: ./foot.rst
 
 .. note::
 
@@ -584,19 +339,7 @@ Package Managers
 - pdm
 - poetry
 
-.. rst-class:: second
-
-.. figure:: _static/Twitter-Mark.png
-   :width: 32px
-   :alt: twitter
-
-   @ucodery
-
-.. figure:: _static/GitHub-Mark-32px.png
-   :width: 32px
-   :alt: octocat
-
-   @ucodery
+.. include:: ./foot.rst
 
 Packaging
 =========
@@ -609,57 +352,35 @@ Packaging
    - record project metadata
 - Build distributions from your project
    - snapshot your project at a version
-   - create sdist and wheels [build]
+   - create sdist and wheel [build]
 
-.. rst-class:: second
-
-.. figure:: _static/Twitter-Mark.png
-   :width: 32px
-   :alt: twitter
-
-   @ucodery
-
-.. figure:: _static/GitHub-Mark-32px.png
-   :width: 32px
-   :alt: octocat
-
-   @ucodery
+.. include:: ./foot.rst
 
 .. nextslide::
 
 .. rst-class:: build
 
-- Upload this distribution
+- Upload these distributions
    - upload to a repository like pypi.org [twine]
 - Install a package
    - download and unpack a distribution [pip]
    - solves based on version ranges and current platform
    - also fulfills all runtime requirements of the distribution
 
-.. rst-class:: second
-
-.. figure:: _static/Twitter-Mark.png
-   :width: 32px
-   :alt: twitter
-
-   @ucodery
-
-.. figure:: _static/GitHub-Mark-32px.png
-   :width: 32px
-   :alt: octocat
-
-   @ucodery
+.. include:: ./foot.rst
 
 .. note::
 
    * bonus package lifecycle steps not part of "packaging"
    * notice we upload a distribution but download a package
 
+.. include:: ./foot.rst
 
 ==========================
  Questions?
 ==========================
 
-.. figure:: _static/python-platypus.png
+.. rst-class:: right
+
+.. image:: _static/python-platypus.png
    :alt: cartoon platypus
-   :align: right
