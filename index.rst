@@ -17,7 +17,6 @@ Packaging
    - usually a single python package
 - Distribution: a file that an end-user can install to get a package at a specific version
    - often downloaded from the internet
-   - does not necessarily commute with packaging
 
 :ref:`https://packaging.python.org/en/latest/glossary/`
 
@@ -25,11 +24,13 @@ Packaging
 
 .. note::
 
+   * packaging is not commutative
+      * installed distributions cannot always be transformed back into a dist
+   * "package" is the only term python interpreter has an optionion about
+   * "packaging" not defined by either pypa or python, but pypa probably would call it "releasing a project"
    * attrs: single library
    * pip: single executable
    * black: both a library and several executables
-   * "package" is the only term python interpreter has an optionion about
-   * "packaging" not defined by either pypa or python, but pypa probably would call it "releasing a project"
 
 Packager
 ========
@@ -106,6 +107,12 @@ pyproject.toml
 
 .. include:: ./trim.rst
 
+.. note::
+
+   * pyproject it tool agnostic
+   * toml format is independent of python
+   * all build tools can share pyproject.toml
+
 Build System Metadata
 =====================
 
@@ -147,7 +154,6 @@ pyproject.toml
 .. note::
 
    * not every pyproject.toml must have a build-system. But all projects *should* have a pyproject.toml and *should* specify the build-backend even if nothing else
-   * bulid-system.requires can be empty, but really how is that ever going to work?
 
 .. nextslide::
 
@@ -223,22 +229,6 @@ The Project
    * none of our metadata does anything - its all static (as we want it)
    * we must actively make a distribution
 
-Distribution
-================
-
-- Single file representing a snapshot of the project
-   - wheel (``.whl``)
-   - sdist (``.tar.gz``)
-- Packaging can involve creating more than one distribution
-   - one sdist and one or more wheels per version release
-
-.. include:: ./trim.rst
-
-.. note::
-
-   * wheels are binary (precompiled). wheels are zipfiles
-   * sdists are source (all compilation happens on user's machine). sdists are (usually) tarballs
-
 Build Frontends
 ===============
 
@@ -278,15 +268,40 @@ Build Frontends
 ::
 
    europython
-   └── dist
-       ├── europython-2022.1-py2-py3-none-any.whl
-       └── europython-2022.1.tar.gz
+   ├── dist
+   │   ├── europython-2022.1-py2-py3-none-any.whl
+   │   └── europython-2022.1.tar.gz
+   ├── pyproject.toml
+   └── europython
+       ├── __init__.py
+       ├── keynotes.py
+       └── sessions
+          ├── __init__.py
+          ├── posters.py
+          ├── talks.py
+          └── tutorials.py
 
 .. include:: ./trim.rst
 
 .. note::
 
    * this is the command that actually calls the ``build`` package
+
+Distribution
+================
+
+- Single file representing a snapshot of the project
+   - wheel (``.whl``)
+   - sdist (``.tar.gz``)
+- Packaging can involve creating more than one distribution
+   - one sdist and one or more wheels per version release
+
+.. include:: ./trim.rst
+
+.. note::
+
+   * wheels are binary (precompiled). wheels are zipfiles
+   * sdists are source (all compilation happens on user's machine). sdists are (usually) tarballs
 
 Publish
 =======
@@ -334,7 +349,7 @@ Package Managers
    * nothing so far has actually put our package on the PYTHONPATH
    * do not always download, can install from local cache
    * also determine the best distribution based on a project name and version range
-   * msut build when installing from (local) source or sdist
+   * must build when installing from (local) source or sdist
 
 .. nextslide::
 
@@ -391,6 +406,10 @@ Packaging
 ==========================
  Questions?
 ==========================
+
+:ref:`https://github.com/ucodery/packaging-python-in-2022`
+
+.. include:: ./foot.rst
 
 .. rst-class:: right
 
