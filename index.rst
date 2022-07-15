@@ -35,6 +35,8 @@ Packaging
 Packager
 ========
 
+.. rst-class:: build
+
 - Transform your package into a project
 - Build a distribution from your project
 - Publish this distribution
